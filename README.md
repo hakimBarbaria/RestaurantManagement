@@ -1,8 +1,8 @@
-Food Delivery Website
+### Food Delivery Website
 
 Welcome to the Food Delivery Website project! This is a modern and stylish website designed to streamline the process of ordering food online. It includes interactive and responsive pages for users to browse menus, place orders, and contact the team.
 
-Table of Contents
+# Table of Contents
 
 Features
 
@@ -16,7 +16,7 @@ Contributing
 
 License
 
-Features
+# Features
 
 Responsive Design: Fully optimized for desktop, tablet, and mobile devices.
 
@@ -30,7 +30,7 @@ Contact Page: Reach out to the team with a beautiful, easy-to-use contact form.
 
 Footer with Links: Includes quick links, social media icons, and additional information.
 
-Pages
+# Pages
 
 1. Home Page
 
@@ -50,7 +50,7 @@ Order form to collect user details, food preferences, and delivery address.
 
 Stylish contact form to collect feedback or queries from users.
 
-Technologies Used
+# Technologies Used
 
 HTML5: For the structure of the website.
 
