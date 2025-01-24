@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="../styles/order.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Foodie<span>Express</span></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html" class="active">Order Now</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="order-banner">
+        <h1>Order Your Favorite Dishes</h1>
+        <p>Fill out the form below to place your order and enjoy our delicious meals delivered to your doorstep.</p>
+    </section>
+
+    <section class="order-form-section">
+        <form class="order-form" action="#" method="POST">
+            <h2>Order Details</h2>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address" placeholder="Enter your delivery address" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="dishes">Select Dishes</label>
+                <select id="dishes" name="dishes[]" multiple required>
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="pasta">Pasta</option>
+                    <option value="salad">Salad</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Special Instructions (Optional)</label>
+                <textarea id="notes" name="notes" placeholder="Enter any special instructions" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 FoodieExpress. All rights reserved.</p>
+    </footer>
+</body>
+</html>

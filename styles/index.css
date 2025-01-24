@@ -1,0 +1,158 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .logo span {
+    color: #ffcc00;
+}
+
+.header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.header nav a.active {
+    border-bottom: 2px solid white;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fff5e6;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+.hero-image {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.menu {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.menu h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ff5722;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.menu-grid article {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-grid article img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.menu-grid article h3 {
+    margin: 15px 0 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+.menu-grid article p {
+    font-size: 18px;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+footer .social-links a:hover {
+    color: #ff5722;
+}

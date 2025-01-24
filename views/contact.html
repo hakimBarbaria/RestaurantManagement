@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Foodie<span>Express</span></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order Now</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-banner">
+        <h1>Contact Us</h1>
+        <p>We're here to help! Whether you have questions, feedback, or just want to say hi, don't hesitate to reach out.</p>
+    </section>
+
+    <section class="contact-section">
+        <!-- Left: Contact Information -->
+        <div class="contact-info">
+            <h2>Our Contact Details</h2>
+            <p>Have something to share or need assistance? Contact us using the information below:</p>
+            <p><strong>Address:</strong> 123 Foodie Street, Gourmet City</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Email:</strong> support@foodieexpress.com</p>
+            <h3>Follow Us on Social Media</h3>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <form class="contact-form" action="#" method="POST">
+            <h2>Send Us a Message</h2>
+            <p>Fill out the form below, and we'll get back to you as soon as possible.</p>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 FoodieExpress. All rights reserved.</p>
+    </footer>
+</body>
+</html>
