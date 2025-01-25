@@ -43,7 +43,7 @@
         </div>
 
         <!-- Right: Contact Form -->
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" id="contact-form" method="POST">
             <h2>Send Us a Message</h2>
             <p>Fill out the form below, and we'll get back to you as soon as possible.</p>
             <div class="form-group">
@@ -65,5 +65,45 @@
     <footer>
         <p>© 2024 FoodieExpress. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+
+            // Collect form data
+            const formData = new FormData(event.target);
+
+            // Prepare the data to send to the server
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+            };
+
+            try {
+                const response = await fetch('http://localhost:5000/api/contact/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    console.log('Message details:', result);
+                    // Optionally, clear the form after submission
+                    event.target.reset();
+                } else {
+                    alert('Error sending message: ' + result.error);
+                }
+            } catch (err) {
+                alert('An error occurred while sending the message.');
+                console.error(err);
+            }
+        });
+    </script>
 </body>
 </html>
