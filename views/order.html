@@ -41,6 +41,11 @@
             </div>
 
             <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
                 <label for="address">Delivery Address</label>
                 <textarea id="address" name="address" placeholder="Enter your delivery address" rows="3" required></textarea>
             </div>
@@ -63,6 +68,61 @@
             <button type="submit" class="submit-btn">Place Order</button>
         </form>
     </section>
+
+    <script>
+        document.querySelector('.order-form').addEventListener('submit', async function(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+
+            // Collect form data
+            const formData = new FormData(event.target);
+
+            // Define prices for each dish
+            const prices = {
+                pizza: 10,  // Price of pizza
+                burger: 5,  // Price of burger
+                pasta: 8,   // Price of pasta
+                salad: 6    // Price of salad
+            };
+
+            // Calculate total based on selected dishes
+            const selectedDishes = formData.getAll('dishes[]');
+            const total = selectedDishes.reduce((sum, dish) => sum + prices[dish], 0);
+
+            // Prepare the data to send to the server
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                address: formData.get('address'),
+                dishes: selectedDishes,
+                notes: formData.get('notes') || '',  // Empty string if no notes
+                total: total,  // Send the calculated total
+            };
+
+            try {
+                const response = await fetch('http://localhost:5000/api/orders/', {  // Updated endpoint
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('Order placed successfully!');
+                    console.log('Order details:', result);
+                } else {
+                    alert('Error placing order: ' + result.error);
+                }
+            } catch (err) {
+                alert('An error occurred while placing the order.');
+                console.error(err);
+            }
+        });
+    </script>
+    
 
     <footer>
         <p>© 2024 FoodieExpress. All rights reserved.</p>
